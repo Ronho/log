@@ -1,9 +1,15 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
-root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+root: content/introduction
+parts:
+  - caption: Guidelines
+    chapters:
+    - file: content/guidelines/introduction
+    - file: content/guidelines/testing/introduction
+      sections:
+      - file: content/guidelines/testing/python_testing
+  - caption: Short Stories
+    chapters:
+    - file: content/short-stories/introduction
+  - caption: Novels
+    chapters:
+    - file: content/novels/introduction
