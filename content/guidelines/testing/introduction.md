@@ -71,6 +71,10 @@ When testing software, you should concentrate on making sure that the behaviour 
 
 Below we will discuss some other topics about how to test your software.
 
+### Arrange - Act - Assert
+
+Tests should follow the Arrange, Act, Assert structure to ensure readability. Each of these stages should only occur once for each test, to ensure that you are not testing two different things within one test. The arrange part contains everything you need to set up the test, the act is where you execute the method or function you want to test, and finally the assert part makes sure that your output is what you expected.
+
 ### Black vs White Box Testing
 
 You will often come across the terms black box and white box testing. These are two different paradigms that will be discussed in more detail later in this section.
@@ -109,34 +113,24 @@ I've often said that you need to isolate functionality or replace dependencies, 
 When writing tests, you want to make sure that tests do not depend on each other or affect each other's results. Depending on the language and framework you are using, there are several ways of doing this. Most frameworks provide some sort of random execution order. Of course, your tests could still pass by chance, but if the tests are run often enough, this shouldn't be a problem. Furthermore, running tests in parallel not only helps to reduce the total time it takes to run all the tests, but also helps to identify tests that depend on or affect each other.
 
 
-## Anti-Patterns
----
-- Anti-Patterns (which anti-patterns make testing harder /easier - e.g. dependency injection, config/context objects)
-- additionalys
+## Testing and Software Design
 
-- python
-    - pytest vs unittest --> pytest
-    - conftest
-    - test folder structure
-    - naming tests
-    - structuring tests
-    - isolating test dependencies
-    - pytest
-        - fixtures, fixture factories --> - everything should be a fixture
-        - parameterized tests
-            - fixtures + parameterized tests (fixture factories)
-            - dynamic tests
-        - conftest
-        - mark tests
-        - random test order
-        - parallelization
-    - classes?
-    - Use Mock instead of MagicMock
-    - How to test sql(-alchemy) queries?
+This section looks at some practices that either make testing more difficult or help to make it easier.
 
-- Unknown:
-    - smoke test?    
-        - fixtures
-        - doc tests
-    - Quality (e.g. Simulation)
-        - A/B tests, hypothesis tests
+### Depdency Injection
+
+I often see classes creating objects of their dependencies within their constructor. This comes with several problems. First, testing the code is more complicated as you cannot just provide a test double. Second, if the dependency is also a class, then the constructor of this class is also called and so on. Essentially, you are creating a series of tests that fail just because of a single error down the line.
+
+### Context Objects
+
+Context objects, or more specific configuration objects that you sometimes see in data science projects, are often used when you have a system with a lot of unknowns and you want to be able to try out different configurations. It is important to remember that keeping track of their use becomes more complicated with each option added. Providing these objects during testing can be a real problem as you need to know every option that can occur and you should test every option, but as the number of options increases you have a huge number of combinations that you will not be able to test.
+
+However, you can try to follow some guidelines to make working with context objects easier.
+
+**Provide a schema:** A schema helps you and other developers understand how the context object is constructed. In languages like Python, where you have dynamic typing, not having a schema creates a black hole that sucks up all your time because you often have to figure out the implications of options.
+
+**Provide a single point for fallback values:** Within your schema, you should define which options can have fallback values, and what those values are. If you define the fallback where your configuration option is read, you will eventually lose track and end up defining two or more fallback values for the same option in different places, leading to unexpected behaviour of your system.
+
+**Structure your context object:** Splitting your configuration into smaller, related pieces and only passing the necessary parts reduces dependencies. When testing these features, it becomes much easier to understand which part of your context object depends on what, and which options you need to test.
+
+**Choose the type for an option carefully:** For example, you implement an alternative way of creating an object of a class and you want to decide within your config which one to use. You could use a simple boolean to disable the new approach or not. However, if you can think of at least a third way to create the object, it is often better to have an enum that identifies all the options.
