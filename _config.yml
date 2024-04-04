@@ -1,5 +1,6 @@
 title: Idea Log
 author: Ron Holzapfel
+copyright: "2024"
 exclude_patterns: [_build, README.md, "**.ipynb_checkpoints"]
 
 execute:
