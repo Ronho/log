@@ -7,9 +7,3 @@ parts:
     - file: content/guidelines/testing/introduction
       sections:
       - file: content/guidelines/testing/python_testing
-  - caption: Short Stories
-    chapters:
-    - file: content/short-stories/introduction
-  - caption: Novels
-    chapters:
-    - file: content/novels/introduction

@@ -4,7 +4,7 @@ copyright: "2024"
 exclude_patterns: [_build, README.md, "**.ipynb_checkpoints"]
 
 execute:
-  execute_notebooks: force
+  execute_notebooks: off
 
 latex:
   latex_documents:
