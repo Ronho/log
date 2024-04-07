@@ -1,6 +1,6 @@
 # Continuous Transaction Scheduling with Conflicts using Quantum Computing
 
-![](images/ "")
+![Transaction Scheduling image by midjourney](images/transaction_scheduling.png "Transaction Scheduling")
 
 - Authors: Ron Holzapfel
 - Link: https://github.com/Ronho/transaction-scheduling-using-quantum-computing

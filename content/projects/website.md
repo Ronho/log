@@ -1,6 +1,6 @@
 # Personal Website
 
-![](images/ "")
+![Personal Website image by midjourney](images/website.png "Personal Website")
 
 - Authors: Ron Holzapfel
 - Link: https://github.com/Ronho/personal-website

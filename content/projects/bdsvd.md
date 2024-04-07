@@ -1,6 +1,6 @@
 # Block Detection using Singular Value Decomposition (BDSVD)
 
-![](images/ "")
+![BDSVD image by midjourney](images/bdsvd.png "BDSVD")
 
 - Authors: Ron Holzapfel, Jan Owe Bauer
 - Link: https://github.com/JanOBauer/bdsvd

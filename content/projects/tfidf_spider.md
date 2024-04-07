@@ -1,6 +1,6 @@
 # Term Frequency-Inverse Document Frequency Spider
 
-![](images/ "")
+![TF-IDF image by midjourney](images/tfidf_spider.png "TF-IDF")
 
 - Authors: Ron Holzapfel
 - Link: https://github.com/Ronho/tfidf-spider/

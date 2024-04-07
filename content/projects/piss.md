@@ -1,6 +1,6 @@
 # Personal Intelligent Storage System (PISS)
 
-![](images/ "")
+![PISS image by midjourney](images/piss.png "PISS")
 
 - Authors: Ron Holzapfel
 - Link: https://github.com/Ronho/personal-intelligent-storage-system
