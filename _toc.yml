@@ -13,12 +13,17 @@ parts:
     - file: content/projects/external_projects
       sections:
       - file: content/projects/prinvars
+      - file: content/projects/bdsvd
+      - file: content/projects/transaction_scheduling
       - file: content/projects/alka
-      - file: content/projects/c2g
-      - file: content/projects/cc2g
+      - file: content/projects/tfidf_spider
+      - file: content/projects/pac_man_ai
       - file: content/projects/aic
       - file: content/projects/ics
-      - file: content/projects/pac_man_ai
+      - file: content/projects/c2g
+      - file: content/projects/cc2g
+      - file: content/projects/piss
+      - file: content/projects/website
   - caption: Info
     chapters:
     - file: content/do_not_open

@@ -4,6 +4,7 @@
 
 - Authors: Ron Holzapfel, Bastian Berle
 - Link: https://github.com/C2G-BR/Coin-Counter-2-Gether
+- Google Play: https://play.google.com/store/apps/details?id=com.c2g.frontend
 - Technologies: Python, Computer Vision, Object Detection, Flask, Flutter
 
 Coin Counter 2 Gether is a mobile application that simplifies coin counting with the help of artificial intelligence.
