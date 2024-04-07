@@ -7,3 +7,18 @@ parts:
     - file: content/guidelines/testing/introduction
       sections:
       - file: content/guidelines/testing/python_testing
+  - caption: Projects
+    chapters:
+    - file: content/projects/introduction
+    - file: content/projects/external_projects
+      sections:
+      - file: content/projects/prinvars
+      - file: content/projects/alka
+      - file: content/projects/c2g
+      - file: content/projects/cc2g
+      - file: content/projects/aic
+      - file: content/projects/ics
+      - file: content/projects/pac_man_ai
+  - caption: Info
+    chapters:
+    - file: content/do_not_open
