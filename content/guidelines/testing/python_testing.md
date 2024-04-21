@@ -72,12 +72,12 @@ The files below the `unit`, `integration`, and `component` folders should follow
 
 #### Tests
 
-Tests must start with `test_` followed by the name of the functionality, the state under test, and the expected behaviour - all in lower_snake_case.
+Tests must start with `test_` followed by the name of the functionality, the state under test, and the expected behaviour - all in lower_snake_case. A protected or private method or function does not include the leading underscore(s).
 
 :::{admonition} Example
 :class: note
 ```python
-def div(numerator: float, denominator: float) -> float:
+def _div(numerator: float, denominator: float) -> float:
     if denominator == 0:
         raise ValueError('Zero division!')
     return numerator/denominator
