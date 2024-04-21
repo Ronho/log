@@ -79,7 +79,7 @@ Tests must start with `test_` followed by the name of the functionality, the sta
 ```python
 def div(numerator: float, denominator: float) -> float:
     if denominator == 0:
-        raise ValueError("Zero division!")
+        raise ValueError('Zero division!')
     return numerator/denominator
 ```
 :::
@@ -119,7 +119,7 @@ In the case of parameterised tests, the state to be tested and the expected beha
 ```python
 def div(numerator: float, denominator: float) -> float:
     if denominator == 0:
-        raise ValueError("Zero division!")
+        raise ValueError('Zero division!')
     return numerator/denominator
 ```
 :::
@@ -129,7 +129,7 @@ def div(numerator: float, denominator: float) -> float:
 
 ```python
 @pytest.mark.parametrize(
-    "numerator,denominator,expected",
+    ('numerator', 'denominator', 'expected'),
     [
         pytest.param(8, 4, 2, id='numerator_8_denominator_4_returns_2'),
         pytest.param(9, 3, 3, id='numerator_9_denominator_3_returns_3'),
@@ -141,7 +141,7 @@ def test_div(numerator, denominator, expected):
 
 ```python
 @pytest.mark.parametrize(
-    "numerator,denominator,expected",
+    ('numerator', 'denominator', 'expected'),
     [(8, 4, 2), (9, 3, 3)]
     ids=lambda n,d,e: f'numerator_{n}_denominator_{d}_returns_{e}'
 )
@@ -151,7 +151,7 @@ def test_div(numerator, denominator, expected):
 
 ```python
 @pytest.mark.parametrize(
-    "numerator,denominator,expected",
+    ('numerator', 'denominator', 'expected'),
     [(8, 4, 2), (9, 3, 3)]
 )
 def test_div_returns_expected_value(numerator, denominator, expected):
@@ -167,7 +167,7 @@ def test_div_denominator_zero_raises_exception():
 
 ```python
 @pytest.mark.parametrize(
-    "numerator,denominator,expected",
+    ('numerator', 'denominator', 'expected'),
     [(8, 4, 2), (9, 3, 3)]
     ids=lambda n,d,e: f'numerator_{n}_denominator_{d}_returns_{e}'
 )
@@ -237,12 +237,12 @@ def do_something(a: int) -> int | None:
 :class: tip
 
 ```python
-@pytest.mark.parametrize("a,expected", [(4, 5), (81, 82)])
+@pytest.mark.parametrize(('a', 'expected'), [(4, 5), (81, 82)])
 def test_do_something_returns_expected_value(a, expected):
     actual = do_something(a)
     assert actual == expected
 
-@pytest.mark.parametrize("a", [(3), (1)])
+@pytest.mark.parametrize('a', [(3), (1)])
 def test_do_something_returns_none(a):
     actual = do_something(a)
     assert actual is None
@@ -253,7 +253,7 @@ def test_do_something_returns_none(a):
 :class: error
 
 ```python
-@pytest.mark.parametrize("a,expected", [(4, 5), (81, 82), (3, None)])
+@pytest.mark.parametrize(('a', 'expected'), [(4, 5), (81, 82), (3, None)])
 def test_do_something_returns_expected_value(a, expected):
     actual = do_something(a)
     assert actual == expected
