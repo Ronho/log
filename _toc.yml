@@ -4,25 +4,25 @@ parts:
   - caption: Guidelines
     chapters:
     - file: content/guidelines/introduction
+      title: Introduction
     - file: content/guidelines/testing/introduction
-      sections:
-      - file: content/guidelines/testing/python_testing
+    - file: content/guidelines/testing/python_testing
   - caption: Projects
     chapters:
     - file: content/projects/introduction
-      sections:
-      - file: content/projects/prinvars
-      - file: content/projects/bdsvd
-      - file: content/projects/transaction_scheduling
-      - file: content/projects/alka
-      - file: content/projects/tfidf_spider
-      - file: content/projects/pac_man_ai
-      - file: content/projects/aic
-      - file: content/projects/ics
-      - file: content/projects/c2g
-      - file: content/projects/cc2g
-      - file: content/projects/piss
-      - file: content/projects/website
+      title: Introduction
+    - file: content/projects/prinvars
+    - file: content/projects/bdsvd
+    - file: content/projects/transaction_scheduling
+    - file: content/projects/alka
+    - file: content/projects/tfidf_spider
+    - file: content/projects/pac_man_ai
+    - file: content/projects/aic
+    - file: content/projects/ics
+    - file: content/projects/c2g
+    - file: content/projects/cc2g
+    - file: content/projects/piss
+    - file: content/projects/website
   - caption: Info
     chapters:
     - file: content/do_not_open
